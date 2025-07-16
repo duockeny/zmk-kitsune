@@ -1,11 +1,18 @@
 /dts-v1/;
-#include <kitsune.dtsi>
+#include <st/f0/stm32f072Xb.dtsi>
+#include <st/f0/stm32f072c(8-b)tx-pinctrl.dtsi>
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <layouts/kitsune/default.dtsi>
 #include <layouts/kitsune/tsangan.dtsi>
 
 / {
+    model = "Kitsune";
+    compatible = "kitsune", "st,stm32f072";
+
     chosen {
+        zephyr,sram = &sram0;
+        zephyr,flash = &flash0;
+
         zmk,kscan = &kscan0;
         // Omitted for ZMK Studio compatability
         //zmk,matrix-transform = &default_transform;
@@ -57,4 +64,52 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3)         RC(3,5)         RC(3,7) RC(3,8)         
 
 &layout_kitsune_tsangan {
     transform = <&default_transform>;
+};
+
+&clk_hsi {
+    status = "okay";
+};
+
+&pll {
+    status = "okay";
+    prediv = <1>;
+    mul = <6>;
+    clocks = <&clk_hsi>;
+};
+
+&rcc {
+    clocks = <&pll>;
+    clock-frequency = <DT_FREQ_M(48)>;
+    ahb-prescaler = <1>;
+    apb1-prescaler = <1>;
+};
+
+zephyr_udc0: &usb {
+    status = "okay";
+    pinctrl-0 = <&usb_dm_pa11 &usb_dp_pa12>;
+    pinctrl-names = "default";
+
+    // Overridden to lower RAM usage.
+    num-bidir-endpoints = <4>;
+
+    // For ZMK Studio compatibility
+    compatible = "vnd,usb-device";
+
+};
+
+&flash0 {
+    /*
+     * For more information, see:
+     * http://docs.zephyrproject.org/latest/guides/dts/index.html#flash-partitions
+     */
+    partitions {
+        compatible = "fixed-partitions";
+        #address-cells = <1>;
+        #size-cells = <1>;
+
+        /* Set 6Kb of storage at the end of the 128Kb of flash */
+        storage_partition: partition@1e800 {
+            reg = <0x0001e800 0x00001800>;
+        };
+    };
 };
