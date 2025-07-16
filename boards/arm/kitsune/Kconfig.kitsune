@@ -1,2 +1,0 @@
-config BOARD_KITSUNE
-    select SOC_STM32F072XB
