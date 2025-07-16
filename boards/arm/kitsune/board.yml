@@ -1,0 +1,6 @@
+board:
+  name: kitsune
+  full_name: Kitsune
+  vendor: artifact
+  socs:
+  - name: stm32f072xb
