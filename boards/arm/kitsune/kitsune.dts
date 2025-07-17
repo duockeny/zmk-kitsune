@@ -16,7 +16,7 @@
         zmk,kscan = &kscan0;
 
         // Omit for ZMK Studio compatability
-        zmk,matrix-transform = &default_transform;
+        zmk,physical-layout = &layout_kitsune_default
     };
 
     kscan0: kscan {
@@ -95,7 +95,6 @@ zephyr_udc0: &usb {
 
     // Add for ZMK Studio compatibility
     //compatible = "vnd,usb-device";
-
 };
 
 &flash0 {
