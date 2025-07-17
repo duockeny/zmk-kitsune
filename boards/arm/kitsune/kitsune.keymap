@@ -38,20 +38,20 @@
         3 {
             display-name = "Func";
             bindings = <
-                &trans &none  &none  &none  &none  &none  &none  &none  &none  &none  &kp F11 &kp F12
-                &trans &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &trans
-                &trans &none  &none  &none  &none  &none  &none  &none  &none  &none  &none   &trans
-                &trans &trans &trans &trans        &trans        &trans &trans        &trans  &trans
+                &bootloader &none  &none  &none  &none  &none  &none  &none  &none  &none  &kp F11 &kp F12
+                &trans      &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &trans
+                &trans      &none  &none  &none  &none  &none  &none  &none  &none  &none  &none   &trans
+                &trans      &trans &trans &trans        &trans        &trans &trans        &trans  &trans
             >;
         };
 
         4 {
             display-name = "Util";
             bindings = <
-                &bootloader &none  &none  &none  &none  &none  &none  &kp HOME &kp UP   &kp PG_UP &none  &kp DEL 
-                &trans      &none  &none  &none  &none  &none  &none  &kp LEFT &kp DOWN &kp RIGHT &none  &kp ENTER
-                &trans      &none  &none  &none  &none  &none  &none  &kp END  &none    &kp PG_DN &none  &trans
-                &trans      &trans &trans &mo 3         &trans        &trans   &trans             &trans &trans
+                &trans &none  &none  &none  &none  &none  &none  &kp HOME &kp UP   &kp PG_UP &none  &kp DEL 
+                &trans &none  &none  &none  &none  &none  &none  &kp LEFT &kp DOWN &kp RIGHT &none  &kp ENTER
+                &trans &none  &none  &none  &none  &none  &none  &kp END  &none    &kp PG_DN &none  &trans
+                &trans &trans &trans &trans        &trans        &trans   &trans             &trans &trans
             >;
         };
 

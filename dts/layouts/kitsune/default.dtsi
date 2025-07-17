@@ -4,7 +4,7 @@
 / {
     layout_kitsune_default: layout_kitsune_default {
         compatible = "zmk,physical-layout";
-        display-name = "40% Kitsune";
+        display-name = "Default";
 
         keys  //                     w   h    x    y     rot    rx    ry
             = <&key_physical_attrs 100 100    0    0       0     0     0>

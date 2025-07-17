@@ -3,7 +3,7 @@
 #include <st/f0/stm32f072c(8-b)tx-pinctrl.dtsi>
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <layouts/kitsune/default.dtsi>
-#include <layouts/kitsune/tsangan.dtsi>
+//#include <layouts/kitsune/tsangan.dtsi>
 
 / {
     model = "Kitsune";
@@ -14,8 +14,9 @@
         zephyr,flash = &flash0;
 
         zmk,kscan = &kscan0;
-        // Omitted for ZMK Studio compatability
-        //zmk,matrix-transform = &default_transform;
+
+        // Omit for ZMK Studio compatability
+        zmk,matrix-transform = &default_transform;
     };
 
     kscan0: kscan {
@@ -62,9 +63,9 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3)         RC(3,5)         RC(3,7) RC(3,8)         
     transform = <&default_transform>;
 };
 
-&layout_kitsune_tsangan {
-    transform = <&default_transform>;
-};
+//&layout_kitsune_tsangan {
+//    transform = <&default_transform>;
+//};
 
 &clk_hsi {
     status = "okay";
@@ -92,8 +93,8 @@ zephyr_udc0: &usb {
     // Overridden to lower RAM usage.
     num-bidir-endpoints = <4>;
 
-    // For ZMK Studio compatibility
-    compatible = "vnd,usb-device";
+    // Add for ZMK Studio compatibility
+    //compatible = "vnd,usb-device";
 
 };
 
