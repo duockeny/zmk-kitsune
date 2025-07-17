@@ -3,7 +3,7 @@
 #include <st/f0/stm32f072c(8-b)tx-pinctrl.dtsi>
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <layouts/kitsune/default.dtsi>
-//#include <layouts/kitsune/tsangan.dtsi>
+#include <layouts/kitsune/tsangan.dtsi>
 
 / {
     model = "Kitsune";
@@ -41,7 +41,7 @@
             , <&gpioa 15 GPIO_ACTIVE_HIGH>
             , <&gpiob 3  GPIO_ACTIVE_HIGH>
             , <&gpiob 4  GPIO_ACTIVE_HIGH>
-            , <&gpioa 5  GPIO_ACTIVE_HIGH>
+            , <&gpiob 5  GPIO_ACTIVE_HIGH>
             , <&gpiob 6  GPIO_ACTIVE_HIGH>
             ;
     };
@@ -63,9 +63,9 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3)         RC(3,5)         RC(3,7) RC(3,8)         
     transform = <&default_transform>;
 };
 
-//&layout_kitsune_tsangan {
-//    transform = <&default_transform>;
-//};
+&layout_kitsune_tsangan {
+    transform = <&default_transform>;
+};
 
 &clk_hsi {
     status = "okay";
@@ -88,7 +88,6 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3)         RC(3,5)         RC(3,7) RC(3,8)         
     ahb-prescaler = <1>;
     apb1-prescaler = <1>;
 };
-
 
 &rtc {
     status = "okay";
