@@ -1,6 +1,15 @@
 if BOARD_KITSUNE
 
+config BOARD
+    default "kitsune"
+
 config ZMK_KEYBOARD_NAME
     default "Kitsune"
+
+config ZMK_USB
+    default y
+
+config ZMK_KSCAN_MATRIX_POLLING
+    default y
 
 endif # BOARD_KITSUNE
