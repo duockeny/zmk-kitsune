@@ -67,6 +67,7 @@ zephyr_udc0: &usb {
     };
 };
 
+/*
 / {
     sram@20003FFF {
         compatible = "zephyr,memory-region", "mmio-sram";
@@ -97,3 +98,4 @@ zephyr_udc0: &usb {
 &sram0 {
     reg = <0x20000000 0x3FFF>;
 };
+*/
