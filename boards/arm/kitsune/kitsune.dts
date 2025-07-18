@@ -1,5 +1,5 @@
 /dts-v1/;
-#include <kitsune.dtsi>
+#include "kitsune.dtsi"
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <layouts/kitsune/default.dtsi>
 #include <layouts/kitsune/tsangan.dtsi>
@@ -9,9 +9,6 @@
     compatible = "kitsune", "st,stm32f072";
 
     chosen {
-        zephyr,sram = &sram0;
-        zephyr,flash = &flash0;
-
         zmk,kscan = &kscan0;
 
         // Omit for ZMK Studio compatability
