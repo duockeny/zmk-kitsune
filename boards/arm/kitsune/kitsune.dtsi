@@ -43,11 +43,6 @@ zephyr_udc0: &usb {
 
     // Overridden to lower RAM usage.
     num-bidir-endpoints = <4>;
-
-    // For studio compatibility
-    cdc_acm_uart: cdc_acm_uart {
-        compatible = "zephyr,cdc-acm-uart";
-    };
 };
 
 &flash0 {
