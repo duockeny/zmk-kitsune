@@ -6,6 +6,7 @@
     chosen {
         zephyr,sram = &sram0;
         zephyr,flash = &flash0;
+        zephyr,console = &cdc_acm_uart;
     };
 };
 
@@ -43,8 +44,10 @@ zephyr_udc0: &usb {
     // Overridden to lower RAM usage.
     num-bidir-endpoints = <4>;
 
-    // Add for ZMK Studio compatibility
-    //compatible = "vnd,usb-device";
+    // For studio compatibility
+    cdc_acm_uart: cdc_acm_uart {
+        compatible = "zephyr,cdc-acm-uart";
+    };
 };
 
 &flash0 {

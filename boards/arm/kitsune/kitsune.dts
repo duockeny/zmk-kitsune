@@ -11,7 +11,6 @@
     chosen {
         zmk,kscan = &kscan0;
 
-        // Omit for ZMK Studio compatability
         zmk,physical-layout = &layout_kitsune_default;
     };
 
