@@ -5,18 +5,21 @@ CONFIG_SOC_STM32F072XB=y
 # 48MHz system clock
 CONFIG_SYS_CLOCK_HW_CYCLES_PER_SEC=48000000
 
-# enable GPIO
+# Enable GPIO
 CONFIG_GPIO=y
 
 # Enable pinctrl
 CONFIG_PINCTRL=y
 
-# clock configuration
+# Clock configuration
 CONFIG_CLOCK_CONTROL=y
 
 # Needed to reduce this to size that will fit on F072 more easily
 CONFIG_ISR_STACK_SIZE=1024
 
+# ZMK settings
 CONFIG_ZMK_KSCAN_MATRIX_POLLING=y
-
 CONFIG_ZMK_USB=y
+CONFIG_RETAINED_MEM=y
+CONFIG_RETENTION=y
+CONFIG_RETENTION_BOOT_MODE=y
