@@ -51,7 +51,7 @@
             , <&key_physical_attrs 100 100  775  300       0     0     0>
             , <&key_physical_attrs 150 100  875  300       0     0     0>
 
-            , <&key_physical_attrs 150 100 1150  300       0     0     0>
+            , <&key_physical_attrs 150 100 1125  300       0     0     0>
             ;
     };
 };
