@@ -68,13 +68,5 @@
         7 {
             status = "reserved";
         };
-
-        8 {
-            status = "reserved";
-        };
-
-        9 {
-            status = "reserved";
-        };
     };
 };

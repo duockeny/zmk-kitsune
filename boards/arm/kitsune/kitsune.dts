@@ -2,7 +2,6 @@
 #include "kitsune.dtsi"
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <layouts/kitsune/default.dtsi>
-#include <layouts/kitsune/tsangan.dtsi>
 
 / {
     model = "Kitsune";
@@ -55,9 +54,5 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3)         RC(3,5)         RC(3,7) RC(3,8)         
 };
 
 &layout_kitsune_default {
-    transform = <&default_transform>;
-};
-
-&layout_kitsune_tsangan {
     transform = <&default_transform>;
 };
