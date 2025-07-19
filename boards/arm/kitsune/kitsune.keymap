@@ -55,5 +55,26 @@
                 &trans &trans &trans &trans        &trans        &trans   &trans             &trans &trans
             >;
         };
+
+        5 {
+            status = "reserved";
+        };
+
+        6 {
+            status = "reserved";
+        };
+
+
+        7 {
+            status = "reserved";
+        };
+
+        8 {
+            status = "reserved";
+        };
+
+        9 {
+            status = "reserved";
+        };
     };
 };
