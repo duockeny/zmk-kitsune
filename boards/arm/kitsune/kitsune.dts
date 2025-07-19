@@ -86,15 +86,15 @@ RC(3,0)         RC(3,2) RC(3,3)         RC(3,5)         RC(3,7) RC(3,8)         
 };
 
 &layout_kitsune_ckl {
-    transform = <&ckl_transform>;
+    transform = <&full_transform>;
 };
 &layout_kitsune_tsangan {
     transform = <&full_transform>;
 };
 
 &layout_kitsune_wkl {
-    transform = <&wkl_transform>;
+    transform = <&full_transform>;
 };
 &layout_kitsune_hhkb {
-    transform = <&ckl_transform>;
+    transform = <&full_transform>;
 };
