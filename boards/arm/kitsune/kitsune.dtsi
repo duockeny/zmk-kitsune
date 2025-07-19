@@ -66,4 +66,3 @@ zephyr_udc0: &usb {
         };
     };
 };
-
