@@ -56,7 +56,7 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3)         RC(3,5)         RC(3,7) RC(3,8)         
         >;
     };
 
-    ckl_transform: keymap_transform_0 {
+    ckl_transform: keymap_transform_1 {
         compatible = "zmk,matrix-transform";
         columns = <12>;
         rows = <4>;
@@ -68,7 +68,7 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5) RC(2,6) RC(2,7) RC(2,8) RC(2,9) 
         >;
     };
 
-    wkl_transform: keymap_transform_0 {
+    wkl_transform: keymap_transform_2 {
         compatible = "zmk,matrix-transform";
         columns = <12>;
         rows = <4>;
