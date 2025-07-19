@@ -7,7 +7,6 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            display-name = "Base";
             bindings = <
                 &kp ESC   &kp Q    &kp W    &kp E &kp R &kp T     &kp Y &kp U &kp I     &kp O   &kp P     &kp BSPC
                 &kp TAB   &kp A    &kp S    &kp D &kp F &kp G     &kp H &kp J &kp K     &kp L   &kp SEMI  &kp SQT
@@ -17,7 +16,6 @@
         };
 
         1 {
-            display-name = "Num";
             bindings = <
                 &kp GRAVE &none  &none  &none  &none  &none  &none  &none  &none     &none   &kp MINUS &kp EQUAL
                 &kp CAPS  &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8    &kp N9  &kp N0    &kp ENTER
@@ -27,9 +25,8 @@
         };
 
         2 {
-            display-name = "Code";
             bindings = <
-                &trans &none  &none  &none  &none  &none  &none  &kp HOME &kp UP   &kp PG_UP &kp BSLH &kp DEL 
+                &trans &none  &none  &none  &none  &none  &none  &kp HOME &kp UP   &kp PG_UP &kp BSLH &kp DEL
                 &trans &none  &none  &none  &none  &none  &none  &kp LEFT &kp DOWN &kp RIGHT &kp LBKT &kp RBKT
                 &trans &none  &none  &none  &none  &none  &none  &kp END  &none    &kp PG_DN &none    &trans
                 &trans &trans &trans &mo 3         &trans        &trans   &trans             &trans   &trans
@@ -37,7 +34,6 @@
         };
 
         3 {
-            display-name = "Func";
             bindings = <
                 &bootloader &none  &none  &none  &none  &none  &none  &none  &none  &none  &kp F11 &kp F12
                 &trans      &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &studio_unlock
@@ -47,12 +43,11 @@
         };
 
         4 {
-            display-name = "Util";
             bindings = <
-                &trans &none  &none  &none  &none  &none  &none  &kp HOME &kp UP   &kp PG_UP &none  &kp DEL 
-                &trans &none  &none  &none  &none  &none  &none  &kp LEFT &kp DOWN &kp RIGHT &none  &kp ENTER
-                &trans &none  &none  &none  &none  &none  &none  &kp END  &none    &kp PG_DN &none  &trans
-                &trans &trans &trans &trans        &trans        &trans   &trans             &trans &trans
+                &trans &none  &none  &none  &none &none  &none &none      &kp C_VOL_UP &kp C_BRI_UP &kp C_PP &kp DEL
+                &trans &none  &none  &none  &none &none  &none &none      &kp C_VOL_DN &kp C_BRI_DN &none    &kp ENTER
+                &trans &none  &none  &none  &none &none  &none &kp C_MUTE &kp C_PREV   &kp C_NEXT   &none    &trans
+                &trans &trans &trans &trans       &trans       &trans     &trans                    &trans   &trans
             >;
         };
 
@@ -63,7 +58,6 @@
         6 {
             status = "reserved";
         };
-
 
         7 {
             status = "reserved";

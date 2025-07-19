@@ -1,4 +1,4 @@
 include:
   - board: kitsune
     snippet: studio-rpc-usb-uart
-    artifact-name: kitsune-zmk-studio
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
